@@ -29,6 +29,7 @@
 
     <div th:fragment="display-jobs">
         <div th:if="${jobs} and ${jobs.size()}">
+            <h3 th:text="${#lists.size(jobs)} + ' Results'">Jobs List Count</h3>
 
             <table class="job-listing" th:each="job : ${jobs}">
                 <tr th:each="field : ${job}">
